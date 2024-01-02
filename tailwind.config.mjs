@@ -30,7 +30,19 @@ export default {
           900: "#474633",
           950: "#2f2f22",
         },
+        
       },
+      backgroundImage: {
+        darkpattern: "linear-gradient(#1c1c1c 2px, transparent 2px), linear-gradient(90deg, #1c1c1c 2px, transparent 2px), linear-gradient(#1c1c1c 1px, transparent 1px), linear-gradient(90deg, #1c1c1c 1px, #161616 1px)",
+        lightpattern: "linear-gradient(#f5f5f5 2px, transparent 2px), linear-gradient(90deg, #f5f5f5 2px, transparent 2px), linear-gradient(#f5f5f5 1px, transparent 1px), linear-gradient(90deg, #f5f5f5 1px, #FDFDFC 1px);",
+      },
+      backgroundPosition: {
+        centeroffset: "-2px -2px, -2px -2px, -1px -1px, -1px -1px",
+
+      },
+      backgroundSize: {
+        patternsize: "50px 50px, 50px 50px, 10px 10px, 10px 10px"
+      }
     },
   },
   plugins: [],
