@@ -1,0 +1,44 @@
+---
+import LayoutTreeBase from "./LayoutTreeBase.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<LayoutTreeBase title="Yazoc proyectos">
+  <div class="bg-romance-50 dark:bg-woodsmoke-950">
+    <!--  -->
+    <div class="contents">
+      <div
+        class="relative flex h-min min-h-screen w-auto flex-col content-start items-start justify-start overflow-visible bg-romance-50 xl:flex-row dark:bg-woodsmoke-950"
+      >
+        <!-- content -->
+        <main
+          class="z-[3] relative flex h-min w-full flex-[1_0_0] flex-col content-center items-center justify-start gap-14 overflow-visible pb-12 pt-16 md:py-40 xl:w-auto xl:pb-40 xl:pt-24"
+        >
+          <slot />
+        </main>
+        <!-- bg -->
+        <div
+          class="absolute left-0 right-0 top-0 z-0 flex h-[75vh] flex-none content-center items-center justify-center gap-2.5"
+        >
+          <!-- Deg -->
+          <div
+            class="absolute inset-0 z-[2] overflow-hidden bg-gradient-to-t from-romance-50 to-transparent dark:from-woodsmoke-950"
+          >
+          </div>
+          <!-- Pattern -->
+          <div class="relative z-[1] h-full w-full flex-none">
+            <div
+              class="h-full w-full bg-transparent bg-lightpattern bg-patternsize bg-centeroffset dark:bg-darkpattern"
+            >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</LayoutTreeBase>
