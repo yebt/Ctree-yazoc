@@ -17,6 +17,12 @@ dependencies:
   '@astrojs/vue':
     specifier: ^4.0.5
     version: 4.0.5(@babel/core@7.23.6)(astro@4.0.7)(vite@5.0.10)(vue@3.3.13)
+  '@fontsource-variable/inter':
+    specifier: ^5.0.16
+    version: 5.0.16
+  '@fontsource-variable/inter-tight':
+    specifier: ^5.0.19
+    version: 5.0.19
   astro:
     specifier: ^4.0.7
     version: 4.0.7(typescript@5.3.3)
@@ -727,6 +733,14 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/inter-tight@5.0.19:
+    resolution: {integrity: sha512-lynPgkEstP6NhW9ji4PeMh37D3cPP1G9uogVNYpNZTnwm4rBz2H7/d+b71l3m0f2LRKRcjENEaDlPatGgZvPhA==}
+    dev: false
+
+  /@fontsource-variable/inter@5.0.16:
+    resolution: {integrity: sha512-k+BUNqksTL+AN+o+OV7ILeiE9B5M5X+/jA7LWvCwjbV9ovXTqZyKRhA/x7uYv/ml8WQ0XNLBM7cRFIx4jW0/hg==}
+    dev: false
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}

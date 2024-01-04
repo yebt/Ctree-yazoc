@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -43,6 +45,19 @@ export default {
           900: "#3b3d3e",
           950: "#252627",
         },
+        concrete: {
+          50: "#f8f8f8",
+          100: "#f2f2f2", // font
+          200: "#dcdcdc",
+          300: "#bdbdbd",
+          400: "#989898",
+          500: "#7c7c7c",
+          600: "#656565",
+          700: "#525252",
+          800: "#464646",
+          900: "#3d3d3d",
+          950: "#292929",
+        },
       },
       backgroundImage: {
         darkpattern:
@@ -55,6 +70,9 @@ export default {
       },
       backgroundSize: {
         patternsize: "50px 50px, 50px 50px, 10px 10px, 10px 10px",
+      },
+      fontFamily: {
+        // sans:["Inter Variable", "Inter Tight Variable", ...defaultTheme.fontFamily.sans],
       },
     },
   },
