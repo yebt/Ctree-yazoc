@@ -7,6 +7,7 @@ export default {
     extend: {
       colors: {
         woodsmoke: {
+          49: "#f5f5f5",
           50: "#f6f6f6",
           100: "#e7e7e7",
           200: "#d1d1d1",
@@ -18,6 +19,7 @@ export default {
           800: "#454545",
           900: "#3d3d3d",
           950: "#161616", // 10% darker
+          951: "#1c1c1c", // 11% darker
         },
         romance: {
           50: "#fdfdfc", // 10% lighter
@@ -55,8 +57,35 @@ export default {
           600: "#656565",
           700: "#525252",
           800: "#464646",
-          900: "#3d3d3d",
+          900: "#3d3d3d", // hover dark border
           950: "#292929",
+        },
+        "mine-shaft": {
+          50: "#f6f6f6",
+          100: "#e7e7e7",
+          200: "#d1d1d1",
+          300: "#b0b0b0",
+          400: "#888888",
+          500: "#6d6d6d",
+          600: "#5d5d5d",
+          700: "#4f4f4f",
+          800: "#454545",
+          900: "#3d3d3d",
+          950: "#282828", // borders
+        },
+        alto: {
+          50: "#f7f7f7",
+          100: "#ededed", 
+          190: "#dbdbdb", // hover  light border 
+          200: "#dedede", // light border
+          300: "#c8c8c8",
+          400: "#adadad",
+          500: "#999999",
+          600: "#888888",
+          700: "#7b7b7b",
+          800: "#676767",
+          900: "#545454",
+          950: "#363636",
         },
       },
       backgroundImage: {
@@ -73,7 +102,14 @@ export default {
       },
       fontFamily: {
         // sans:["Inter Variable", "Inter Tight Variable", ...defaultTheme.fontFamily.sans],
+        // sans:["Inter Variable", ...defaultTheme.fontFamily.sans],
+        sans:["Inter Variable"],
+        inter: ["Inter Variable", "sans-serif"],
+        "inter-tight": ["Inter Tight Variable", "sans-serif"],
       },
+      // fontSize: {
+      //   "4.5xl": ["2.5rem", "3rem"],
+      // }
     },
   },
   plugins: [],
