@@ -1,31 +1,89 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import localYPLogoScuared from '../assets/images/logo-yazoc-cutted-square.png';
+import localYPLogoScuared from "../assets/images/logo-yazoc-cutted-square.png";
+import AnchorSimpleButton from "./AnchorSimpleButton.astro";
+import HIBoxMultiple from "./heroIcons/HIBoxMultiple.astro";
 
-interface Props {}
+interface Props {
+  title: string;
+  description: string;
+  website: string;
+}
+
+const { title, description, website } = Astro.props;
 ---
 
 <header
-  class="relative flex h-min w-full flex-none flex-col content-center items-center justify-center gap-6 px-3"
+  class="relative flex h-min w-full flex-none flex-col content-center items-center justify-start gap-6 xl:gap-8 md:px-3"
 >
-<!-- Photo -->
+  <!-- Photo -->
   <a
-  href="/"
-    class="relative flex h-min w-min flex-none flex-col content-center items-center justify-center gap-3 overflow-hidden -rounded-full will-change-transform "
+    href="/"
+    class="-rounded-full relative flex h-min w-min flex-none flex-col content-center items-center justify-center gap-3 overflow-hidden will-change-transform"
   >
-  <span class="text-[0rem]">home</span>
     <div
-      class="relative aspect-square h-auto w-20 flex-none -rounded-md md:h-20 xl:h-24 md:w-auto bg-chicago-200"
+      class="-rounded-md relative aspect-square h-auto w-28 flex-none md:h-20 md:w-auto xl:h-32"
     >
-      <div class="absolute rounded-[inherit] top-0 left-0 right-0 bottom-0 ">
-        <Image src={localYPLogoScuared} alt="Logo de Yazoc Proyectos"/>
+      <div
+        class="absolute bottom-0 left-0 right-0 top-0 rounded-[inherit] bg-concrete-100"
+      >
+        <Image
+          class="h-full w-full rounded-[inherit] object-cover object-center"
+          style="image-rendering: auto"
+          src={localYPLogoScuared}
+          alt="Logo de Yazoc Proyectos"
+          width=128
+          height=128
+        />
+        <span class="text-[0rem]">home</span>
       </div>
     </div>
   </a>
-  <!-- Title -->
-</header>
 
+  <!-- Title -->
+  <section
+    class="relative flex h-min w-full max-w-md xl:max-w-xl flex-none flex-col content-center items-center justify-center gap-4 xl:gap-8"
+  >
+    <section
+      class="flex h-auto w-full flex-none shrink-0 transform-none flex-col justify-start whitespace-pre-wrap break-words"
+    >
+      <!-- text-center font-['Inter_Tight_Variable','sans-serif'] text-3xl font-semibold tracking-[-0.4px] text-woodsmoke-950 md:text-4xl dark:text-concrete-100 -->
+      <h1
+        class="text-center font-inter-tight text-[32px] font-semibold  text-woodsmoke-950 md:text-5xl xl:text-6xl   dark:text-concrete-100 "
+      >
+        {title}
+      </h1>
+    </section>
+
+    <section
+      class="flex h-auto w-full flex-none shrink-0 transform-none flex-col justify-start whitespace-pre-wrap break-words"
+    >
+      <h2
+        class="text-center font-['Inter_Variable','sans-serif'] text-base xl:text-xl 2xl:text-2xl font-normal tracking-normal text-woodsmoke-950 dark:text-concrete-100"
+      >
+        {description}
+      </h2>
+    </section>
+  </section>
+
+  <!-- Main buttons -->
+  <section class="flex flex-none content-center items-center justify-center w-full gap-9 h-min ">
+    <div class="flex-none h-auto w-auto">
+      <AnchorSimpleButton link={website} >
+        Website
+      </AnchorSimpleButton>
+
+    </div>
+    <div class="flex-none h-auto w-auto">
+      <AnchorSimpleButton link={website}  >
+        <!-- <HIBoxMultiple class="h-4"/> -->
+        <span class="break-keep">Email Me</span>
+      </AnchorSimpleButton>
+    </div>
+  </section>
+
+</header>
 
 <!-- <header
   class="relative flex h-min w-full flex-none content-center items-center justify-start gap-6 p-0 md:px-3"
