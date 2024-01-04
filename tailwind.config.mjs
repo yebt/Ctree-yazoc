@@ -30,19 +30,32 @@ export default {
           900: "#474633",
           950: "#2f2f22",
         },
-        
+        chicago: {
+          50: "#f5f6f6",
+          100: "#e6e7e7",
+          200: "#cfd2d2",
+          300: "#aeb2b2",
+          400: "#858a8b",
+          500: "#6a6f70",
+          600: "#565a5b", // head
+          700: "#4d5051",
+          800: "#444646",
+          900: "#3b3d3e",
+          950: "#252627",
+        },
       },
       backgroundImage: {
-        darkpattern: "linear-gradient(#1c1c1c 2px, transparent 2px), linear-gradient(90deg, #1c1c1c 2px, transparent 2px), linear-gradient(#1c1c1c 1px, transparent 1px), linear-gradient(90deg, #1c1c1c 1px, #161616 1px)",
-        lightpattern: "linear-gradient(#f5f5f5 2px, transparent 2px), linear-gradient(90deg, #f5f5f5 2px, transparent 2px), linear-gradient(#f5f5f5 1px, transparent 1px), linear-gradient(90deg, #f5f5f5 1px, #FDFDFC 1px);",
+        darkpattern:
+          "linear-gradient(#1c1c1c 2px, transparent 2px), linear-gradient(90deg, #1c1c1c 2px, transparent 2px), linear-gradient(#1c1c1c 1px, transparent 1px), linear-gradient(90deg, #1c1c1c 1px, #161616 1px)",
+        lightpattern:
+          "linear-gradient(#f5f5f5 2px, transparent 2px), linear-gradient(90deg, #f5f5f5 2px, transparent 2px), linear-gradient(#f5f5f5 1px, transparent 1px), linear-gradient(90deg, #f5f5f5 1px, #FDFDFC 1px);",
       },
       backgroundPosition: {
         centeroffset: "-2px -2px, -2px -2px, -1px -1px, -1px -1px",
-
       },
       backgroundSize: {
-        patternsize: "50px 50px, 50px 50px, 10px 10px, 10px 10px"
-      }
+        patternsize: "50px 50px, 50px 50px, 10px 10px, 10px 10px",
+      },
     },
   },
   plugins: [],
