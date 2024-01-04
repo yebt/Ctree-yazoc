@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+
+import localYPLogoScuared from '../assets/images/logo-yazoc-cutted-square.png';
+
+interface Props {}
+---
+
+<header
+  class="relative flex h-min w-full flex-none flex-col content-center items-center justify-center gap-6 px-3"
+>
+<!-- Photo -->
+  <a
+  href="/"
+    class="relative flex h-min w-min flex-none flex-col content-center items-center justify-center gap-3 overflow-hidden -rounded-full will-change-transform "
+  >
+  <span class="text-[0rem]">home</span>
+    <div
+      class="relative aspect-square h-auto w-20 flex-none -rounded-md md:h-20 xl:h-24 md:w-auto bg-chicago-200"
+    >
+      <div class="absolute rounded-[inherit] top-0 left-0 right-0 bottom-0 ">
+        <Image src={localYPLogoScuared} alt="Logo de Yazoc Proyectos"/>
+      </div>
+    </div>
+  </a>
+  <!-- Title -->
+</header>
+
+
+<!-- <header
+  class="relative flex h-min w-full flex-none content-center items-center justify-start gap-6 p-0 md:px-3"
+>
+  <a
+    href=""
+    class="relative flex h-min w-min flex-none flex-col content-center items-center justify-center gap-3 overflow-hidden p-0 will-change-transform"
+  >
+    <div
+      class="relative aspect-square h-20 w-auto flex-none rounded-md xl:h-24"
+    >
+      <div class="absolute bottom-0 left-0 right-0 top-0 rounded-[inherit]">
+        
+      </div>
+    </div>
+  </a>
+</header> -->
