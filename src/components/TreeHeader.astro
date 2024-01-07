@@ -3,15 +3,16 @@ import { Image } from "astro:assets";
 
 import localYPLogoScuared from "../assets/images/logo-yazoc-cutted-square.png";
 import AnchorSimpleButton from "./AnchorSimpleButton.astro";
-import HIBoxMultiple from "./heroIcons/HIBoxMultiple.astro";
+import TIMail from "./tablerIcons/TIconMail.astro";
 
 interface Props {
   title: string;
   description: string;
   website: string;
+  emaillink: string;
 }
 
-const { title, description, website } = Astro.props;
+const { title, description, website,emaillink } = Astro.props;
 ---
 
 <header
@@ -20,13 +21,13 @@ const { title, description, website } = Astro.props;
   <!-- Photo -->
   <a
     href="/"
-    class="-rounded-full relative flex h-min w-min flex-none flex-col content-center items-center justify-center gap-3 overflow-hidden will-change-transform"
+    class="-rounded-full rounded-sm relative flex h-min w-min flex-none flex-col content-center items-center justify-center gap-3 overflow-hidden will-change-transform transition-all duration-300 ease-in-out  hover:shadow-md dark:hover:shadow-lg hover:shadow-concrete-500 hover:dark:shadow-concrete-600"
   >
     <div
       class="-rounded-md relative aspect-square h-auto w-28 flex-none md:h-20 md:w-auto xl:h-32"
     >
       <div
-        class="absolute bottom-0 left-0 right-0 top-0 rounded-[inherit] bg-concrete-100"
+        class="absolute bottom-0 left-0 right-0 top-0 rounded-[inherit] transition-all duration-150 ease-in-out bg-woodsmoke-200/40 dark:bg-concrete-100/40  hover:bg-woodsmoke-200/60 hover:dark:bg-concrete-200 p-0.5"
       >
         <Image
           class="h-full w-full rounded-[inherit] object-cover object-center"
@@ -76,8 +77,9 @@ const { title, description, website } = Astro.props;
 
     </div>
     <div class="flex-none h-auto w-auto">
-      <AnchorSimpleButton link={website}  >
+      <AnchorSimpleButton link={emaillink}  darker={true}>
         <!-- <HIBoxMultiple class="h-4"/> -->
+        <TIMail class="h-4 pr-2"/>
         <span class="break-keep">Email Me</span>
       </AnchorSimpleButton>
     </div>
@@ -85,19 +87,3 @@ const { title, description, website } = Astro.props;
 
 </header>
 
-<!-- <header
-  class="relative flex h-min w-full flex-none content-center items-center justify-start gap-6 p-0 md:px-3"
->
-  <a
-    href=""
-    class="relative flex h-min w-min flex-none flex-col content-center items-center justify-center gap-3 overflow-hidden p-0 will-change-transform"
-  >
-    <div
-      class="relative aspect-square h-20 w-auto flex-none rounded-md xl:h-24"
-    >
-      <div class="absolute bottom-0 left-0 right-0 top-0 rounded-[inherit]">
-        
-      </div>
-    </div>
-  </a>
-</header> -->

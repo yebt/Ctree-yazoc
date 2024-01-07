@@ -1,0 +1,25 @@
+---
+import type { Link } from "@/types";
+import SimpleLink from "./linkbuttons/SimpleLink.astro";
+interface Props {
+  links: Array<Link>;
+}
+const { links } = Astro.props;
+---
+
+<section class="flex w-full flex-none items-center justify-center">
+  <ul class="flex flex-col gap-2">
+    {
+      links.map((singleLink: Link) => {
+        if (singleLink.type === "tel") {
+          return (
+            <li>
+              <SimpleLink {...singleLink} />
+            </li>
+          );
+        }
+        return <span>Not supported yeet {singleLink.type}</span>;
+      })
+    }
+  </ul>
+</section>

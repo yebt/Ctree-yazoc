@@ -1,7 +1,5 @@
 ---
-// import Layout from '../layouts/Layout.astro';
-// import Card from '../components/Card.astro';
-// import LayoutTree from "../layouts/LayoutBaseTree.astro";
+import type { Link } from "@/types";
 
 import TreeFooter from "@/components/TreeFooter.astro";
 import TreeHeader from "@/components/TreeHeader.astro";
@@ -13,12 +11,18 @@ const description = "Yazoo Projects link in site bio. The greatest, professional
 const website = "https://yazocproyectos.com";
 const email = "yazocproyectos@gmail.com";
 const emaillink = `mailto:${email}`;
+
+const tel = "+573177703088"
+
+const links: Array<Link> = [
+	{ title: 'Tel', description: "Llámanos" , link:`tel:${tel}`, type: "tel", action: "Call"},
+]
 ---
 
 <LayoutTreeContainer title={title}>
 	<div class="content-center items-center flex flex-none flex-col xl:gap-16 h-min justify-start container relative  gap-12 px-6 xl:px-9 w-full md:gap-14">
 		<TreeHeader title={title} description={description} website={website} emaillink={emaillink}/>
-		<TreeLinksContainer />
+		<TreeLinksContainer links={links} />
 		<TreeFooter />
 	</div>
 </LayoutTreeContainer>

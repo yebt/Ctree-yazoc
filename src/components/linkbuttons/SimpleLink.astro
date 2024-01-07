@@ -1,0 +1,16 @@
+---
+import AnchorSimpleButton from '../AnchorSimpleButton.astro';
+interface Props {
+  title: string;
+  description: string;
+  link: string;
+  type: string;
+  action: string;
+}
+const { title, description, link, type, action} = Astro.props;
+---
+
+<a href={link} target="_blank" class="flex justify-center items-start bg-woodsmoke-49 dark:bg-woodsmoke-951 w-full  h-min rounded-sm gap-5 xl:gap-6 p-4 xl:pr-8 
+border border-alto-200 hover:border-alto-190 dark:border-mine-shaft-950 hover:dark:border-concrete-900 text-concrete-950 dark:text-alto-50">
+aad
+</a>
